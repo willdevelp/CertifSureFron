@@ -292,7 +292,7 @@ function QRcodeNum() {
             
             try {
                 const response = await axios.get(
-                    `http://localhost:8000/api/upload-files/${refNum}`
+                    `https://cerisuckback.onrender.com/api/upload-files/${refNum}`
                 );
 
                 if (response.data.success) {
@@ -418,7 +418,7 @@ function QRcodeNum() {
                                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Aperçu du document</h3>
                                         <div className="border-2 border-gray-200 rounded-xl overflow-hidden shadow-sm">
                                             <iframe
-                                                src={`http://localhost:8000/storage/${certificateData.certificate.processed_path}`}
+                                                src={`https://cerisuckback.onrender.com/storage/${certificateData.certificate.processed_path}`}
                                                 title="Aperçu du PDF"
                                                 className="w-full h-96"
                                             ></iframe>
@@ -440,7 +440,7 @@ function QRcodeNum() {
                                     <motion.a
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.98 }}
-                                        href={`http://localhost:8000/api/download-file/${certificateData.certificate.reference_number}`}
+                                        href={`https://cerisuckback.onrender.com/api/download-file/${certificateData.certificate.reference_number}`}
                                         download
                                         className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg shadow-md flex items-center justify-center gap-2"
                                     >

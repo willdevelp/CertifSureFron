@@ -20,7 +20,7 @@ function Reference() {
         setError('');
         
         try {
-            const response = await axios.get(`http://localhost:8000/api/upload-files/${referenceNumber}`);
+            const response = await axios.get(`https://cerisuckback.onrender.com/api/upload-files/${referenceNumber}`);
             navigate('/certificate-result', { 
                 state: {
                     certificate: response.data,
